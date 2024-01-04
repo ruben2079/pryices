@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 /* Angular Material - imported libraries */
 import {MatIconModule } from '@angular/material/icon';
 import {  MatButtonModule } from '@angular/material/button';
@@ -21,6 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { PollComponent } from './sidenav/poll/poll.component';
 import { NewsletterComponent } from './sidenav/newsletter/newsletter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RandomproductsComponent } from './container/randomproducts/randomproducts.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MenuComponent,
     PollComponent,
     NewsletterComponent,
+    RandomproductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     /* Angular Material */
     MatToolbarModule, 
     MatButtonModule, 
