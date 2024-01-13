@@ -12,6 +12,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 /* End - Angular Material - imported libraries */
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -49,6 +53,9 @@ import { RandomproductsComponent } from './container/randomproducts/randomproduc
     MatSidenavModule,
     MatListModule,
     MatRadioModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
     /* End Angular Materia */
     NgbModule
   ],

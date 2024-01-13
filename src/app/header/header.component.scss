@@ -14,3 +14,13 @@
   .mat-toolbar {
     position: relative;
   }
+  
+  .mat-mdc-form-field-subscript-wrapper {
+    margin-bottom: -23px;
+  }
+
+  .search-form-container {
+    .mdc-text-field--filled {
+      border-radius: 50px !important;
+    }
+  }

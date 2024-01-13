@@ -1,10 +1,27 @@
-<div class="list-container"  *ngFor="let data of randomProductsList">
-    <div class="product-container">
-        <div class="image-container">
-            <img [src]="data.thumbnail" />
-        </div>
-        <div class="product-details">
-            product-details
+<div class="main-container">
+    <div class="list-container" *ngFor="let data of randomProductsList">
+        <div class="product-container">
+            <div class="image-container">
+                <img [src]="data.thumbnail" />
+            </div>
+            <div class="product-details">
+                <h6>{{ data.product_name }}</h6>
+                <img src='https://www.pryices.com/assets/images/icon/star-{{ data.rating }}.gif'>
+            </div>
+            <p><strong>Price: </strong>{{ data.price }} {{ data.currency }}</p>
+            <div class="product-details-extended">
+                <strong>Product: </strong>
+                <strong *ngIf="data.stock === '1'">
+                    <span class="available-item">Available</span>
+                </strong>
+                <strong *ngIf="data.stock !== '1'">
+                    <span class="not-available-item">Not available</span>
+                </strong>
+                <p>{{ data.name }}</p>
+                <p>{{ data.address }}, {{ data.city }}, {{ data.state_province }}, {{ data.country }}</p>
+                <p><strong>Phone: </strong>+{{ data.phone }}</p>
+                <p><strong>Get directions: </strong><a target="_blank" href="https://www.google.com/maps/dir/,+{{ data.address }},{{ data.city }},{{ data.state_province }}{{ data.country }}"><img src="https://pryices.com/assets/images/icon/location.gif" /></a></p>
+            </div>
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RandomproductsService } from 'src/app/service/randomproducts.service';
 import { Randomproducts } from 'src/app/models/randomproducts';
+import { take, takeUntil } from 'rxjs';
 @Component({
   selector: 'app-randomproducts',
   templateUrl: './randomproducts.component.html',
@@ -18,7 +19,7 @@ export class RandomproductsComponent implements OnInit {
 
   randomProducts(){
     this.randomProductsService.getRandomProducts()
-    .pipe()
+    .pipe(take(1))
     .subscribe(res => {
       this.randomProductsList = res;
       console.log(res);
