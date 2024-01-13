@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 export class RegistrationComponent {
   // @ts-ignore
   mainForm: FormGroup;
+  
   constructor(private formBuilder: FormBuilder){
     this.mainForm = this.formBuilder.group({
       fname: new FormControl(null, [Validators.required]),
