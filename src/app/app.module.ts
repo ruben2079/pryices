@@ -27,6 +27,7 @@ import { PollComponent } from './sidenav/poll/poll.component';
 import { NewsletterComponent } from './sidenav/newsletter/newsletter.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RandomproductsComponent } from './container/randomproducts/randomproducts.component';
+import { RegistrationComponent } from './shared/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { RandomproductsComponent } from './container/randomproducts/randomproduc
     PollComponent,
     NewsletterComponent,
     RandomproductsComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
