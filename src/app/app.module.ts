@@ -5,17 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 /* Angular Material - imported libraries */
-import {MatIconModule } from '@angular/material/icon';
-import {  MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatRadioModule } from '@angular/material/radio';
+//** Modules not recognized */
+import {MatDialogModule,
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogTitle,
+  MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
+} from '@angular/material/dialog';
 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+//** End -- Modules not recognized */
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+
 /* End - Angular Material - imported libraries */
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -57,9 +71,14 @@ import { RegistrationComponent } from './shared/registration/registration.compon
     MatRadioModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDialogModule,
+
+    MatDatepickerModule,
     /* End Angular Materia */
-    NgbModule
+    NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
